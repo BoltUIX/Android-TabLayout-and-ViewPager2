@@ -31,8 +31,6 @@ class TabLayoutDemo : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // val root= inflater.inflate(R.layout.tab_layout, container, false)
-
         //renderViewPager
         binding.viewpager.adapter = object : FragmentStateAdapter(this) {
 
@@ -60,7 +58,8 @@ interface ResourceStore {
             R.string.tab1, R.string.tab2, R.string.tab3
         )
         val pagerFragments = listOf(
-            Fragment1.create(), Fragment2.create(),
+            Fragment1.create(),
+            Fragment2.create(),
             Fragment3.create())
     }
 }
